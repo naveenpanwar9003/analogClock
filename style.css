@@ -151,3 +151,12 @@ main {
   border-radius: 10px;
   transform-origin: bottom;
 }
+
+.am-pm-container{
+  color: #fff;
+  font-weight: 300;
+  position: absolute;
+  left: 50%;
+  top:20%;
+  transform:translateX(-50%);
+}

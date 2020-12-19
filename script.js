@@ -13,11 +13,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     const secondsCoveredDegree = 6;
     const minutesCoveredDegree = 6;
     const hoursCoveredDegree = 30;
+    const amPm = getDate.getHours() > 12 ? 'P.M'  : 'A.M';
 
     // Get all the necessary elements
     const secondsNeedle = document.querySelector(".seconds-needle");
     const minutesNeedle = document.querySelector(".minutes-needle");
     const hoursNeedle = document.querySelector(".hour-needle");
+    const amPmContainer = document.querySelector(".am-pm-container");
+
 
     secondsNeedle.style.transform = `translateX(-50%) rotate(${
       getSeconds * secondsCoveredDegree
@@ -28,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function (e) {
     hoursNeedle.style.transform = `translateX(-50%) rotate(${
       getHour * hoursCoveredDegree
     }deg)`;
+
+    amPmContainer.textContent = amPm ;
   }
 
   // SetTime Interval to call updateUI function every second
